@@ -1,6 +1,8 @@
 import random
 import time
 
+# test change 
+
 # Opens the csv file to choose words from.
 with open("hangman_real_words_min4.csv", "r") as file:
     word_bank = [line.strip() for line in file if line.strip()]
