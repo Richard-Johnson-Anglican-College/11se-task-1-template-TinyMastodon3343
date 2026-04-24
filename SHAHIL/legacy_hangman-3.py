@@ -2,6 +2,7 @@ import random
 import time
 
 # test change 
+# test change 2
 
 # Opens the csv file to choose words from.
 with open("hangman_real_words_min4.csv", "r") as file:
