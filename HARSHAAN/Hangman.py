@@ -31,6 +31,8 @@ current_game_state = {
 
 # Function to load custom words from the CSV file.
 # This allows players to add their own words and play with them later.
+
+
 def load_custom_words():
     words = []
     # Create an empty list where custom words will be stored.
@@ -55,6 +57,8 @@ def load_custom_words():
     # Return the full list of custom words.
 
 # Function that allows the player to add their own word to the file.
+
+
 def add_custom_word():
     new_word = input("Enter a new custom word: ").lower()
     # Ask the player for a new word and convert it to lowercase.
@@ -78,6 +82,8 @@ def add_custom_word():
     # Inform the user the word was saved.
 
 # Function that displays the difficulty menu and returns a chosen word.
+
+
 def choose_difficulty():
 
     while True:
@@ -113,6 +119,8 @@ def choose_difficulty():
             # If the user enters something incorrect.
 
 # Function that displays the current progress of the game.
+
+
 def display_progress():
     secret = current_game_state["secret_word"]
     # Get the secret word from the game state.
@@ -143,6 +151,8 @@ def display_progress():
     print("Hints Left:", current_game_state["hints_left"])
 
 # Function that processes the player's input each turn.
+
+
 def play_turn(user_input):
 
     secret = current_game_state["secret_word"]
@@ -175,7 +185,6 @@ def play_turn(user_input):
 
         return
 
-
     # ---- WORD GUESS ----
 
     if len(user_input) > 1:
@@ -194,7 +203,6 @@ def play_turn(user_input):
             current_game_state["score"] -= 10
 
         return
-
 
     # ---- SINGLE LETTER GUESS ----
 
@@ -216,6 +224,8 @@ def play_turn(user_input):
         current_game_state["score"] -= 10
 
 # Function that determines if the game has ended.
+
+
 def check_game_over():
 
     secret = current_game_state["secret_word"]
@@ -240,6 +250,8 @@ def check_game_over():
     # Otherwise the game continues.
 
 # Function asking the player if they want to play again.
+
+
 def play_again():
 
     choice = input("Do you want to play again? (yes/no): ").lower()
@@ -247,6 +259,7 @@ def play_again():
     return choice == "yes"
     # This returns True if the player typed "yes".
     # Otherwise it returns False.
+
 
 # The main program starts here.
 if __name__ == "__main__":
